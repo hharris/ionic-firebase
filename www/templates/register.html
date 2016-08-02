@@ -1,0 +1,29 @@
+<ion-view view-title="Register">
+    <ion-content ng-controller="RegisterCtrl" class="has-header padding">
+        <p>{{errorMessage}}</p>
+        <form name="myform"  ng-submit="register()" novalidate>
+
+            <label class="item item-input">
+                <input type="text" name="first_name" placeholder="First Name" ng-model="user.first_name" ng-required="true">
+            </label>
+            
+            <label class="item item-input">
+                <input type="text" name="last_name" placeholder="Last Name" ng-model="user.last_name" ng-required="true">
+            </label>
+            
+            <label class="item item-input">
+                <input type="email" name="email" placeholder="Email" ng-model="user.email" ng-required="true">
+            </label>
+
+            <label class="item item-input">
+                <input type="password" name="password" placeholder="Password" ng-model="user.password" ng-required="true">
+            </label>
+
+            <button type="submit" class="button button-full button-positive" ng-disabled="myform.$invalid">Register</button>
+            
+            <a href="#/login">Already have an account?</a>
+        
+        </form>
+        
+    </ion-content>
+</ion-view>

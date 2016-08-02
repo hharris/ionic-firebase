@@ -1,0 +1,22 @@
+<ion-view view-title="Login">
+    <ion-content ng-controller="LoginCtrl" class="padding">
+        <p>{{errorMessage}}</p>
+        
+        <form name="myform"  ng-submit="login()" novalidate>
+
+            <label class="item item-input">
+                <input type="email" name="email" placeholder="Email" ng-model="user.email" ng-required="true">
+            </label>
+
+            <label class="item item-input">
+                <input type="password" name="password" placeholder="Password" ng-model="user.password" ng-required="true">
+            </label>
+
+            <button type="submit" class="button button-full button-positive" ng-disabled="myform.$invalid">Login</button>
+            
+            <a ng-href="#/register">Register</a>
+        
+        </form>
+        
+    </ion-content>
+</ion-view>
